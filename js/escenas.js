@@ -1,23 +1,23 @@
 var escenas =	[
 					{
-						'dialogo':'Hola y bienvenido a Webjuego VN, la Visual Novel creada utilizando HTML+CSS+JavaScript.',
+						'dialogo':'<strong>Wikipe-tan:</strong> ¡Hola! Bienvenido a Webjuego VN. Este juego esta hecho en HTML+CSS+JS y tiene licencia GPLv2.',
 						'bg':'convenienceStore.jpg',
 						'char1':'wikipetan.png',
 						'char2':'',
 						'char3':'',
 					},
 					{
-						'dialogo':'Como ves al hacer click en siguiente puedes pasar este nuevo diálogo, aunque el fondo se mantiene.',
+						'dialogo':'<strong>Commons-tan:</strong>  El sistema del juego es bastantes sencillo y permite una fácil modificación mediante un archivo llamado escenas.js.',
 						'bg':'convenienceStore.jpg',
-						'char1':'wikipetan.png',
+						'char1':'commonstan.png',
 						'char2':'wikipetan.png',
 						'char3':'',
 					},
 					{
-						'dialogo':'Si haces click en el botón menú se despliega el menú del juego que da la opción de guardar o cargar la partida.',
+						'dialogo':'<strong>Quote-tan:</strong> Este es el último diálogo del juego.',
 						'bg':'convenienceStore.jpg',
-						'char1':'wikipetan.png',
+						'char1':'commonstan.png',
 						'char2':'wikipetan.png',
-						'char3':'wikipetan.png',
+						'char3':'quotetan.png',
 					}
 				];

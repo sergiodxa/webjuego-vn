@@ -5,15 +5,7 @@
 body {
 	background: black;
 }
-#juego {
-	background: white;
-	background-repeat: no-repeat;
-	height: 550px;
-	margin: 0 auto;
-	position: relative;
-	width: 800px;
-}
-#juego #botones {
+#botones {
 	bottom: 0;
 	position: absolute;
 	right: 0;
@@ -21,16 +13,16 @@ body {
 	vertical-align: top;
 	width: 100px;
 }
-#juego #botones button {
+#botones button {
 	border: 0;
 	margin: 0 0 0 0;
 	padding: 5.5px 0;
 	width: 100px;
 }
-#juego #botones button:nth-child(2) {
+#botones button:nth-child(2) {
 	margin: 5px 0;
 }
-#juego #dialogo {
+#dialogo {
 	border: 3px dotted black;
 	border-radius: 1em;
 	bottom: 5px;
@@ -39,6 +31,14 @@ body {
 	position: absolute;
 	right: 105px;
 	top: 455px;
+}
+#juego {
+	background: white;
+	background-repeat: no-repeat;
+	height: 550px;
+	margin: 0 auto;
+	position: relative;
+	width: 800px;
 }
 #mensaje {
 	background: white;
@@ -83,6 +83,7 @@ body {
 	right: 0;
 	text-align: center;
 }
-#personaje img {
+#personajes img {
 	display: inline-block;
+	max-height: 400px;
 }

@@ -37,6 +37,9 @@ function cambiarEscena() {
 	else if (escenas[escena].char1 != '') {
 		$('#personajes').html('<img src="img/char/'+escenas[escena].char1+'" />'); //mostramos al único personaje
 	}
+	else {
+		$('#personajes').html(''); //quitamos a todos los personajes
+	}
 };
 
 //Cargar partida
