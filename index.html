@@ -16,6 +16,15 @@
 </head>
 <body>
 	<div id="juego">
+		<div id="personajes">
+		</div>
+		<p id="dialogo">
+		</p>
+		<div id="botones">
+			<button onclick="abrirMenu()" id="menuBotton">Menú</button>
+			<button onclick="anteriorEscena()" id="anteriorEscena">Anterior</button>
+			<button onclick="siguienteEscena()" id="siguienteEscena">Siguiente</button>
+		</div>
 		<div id="menu">
 			<ul>
 				<li><h2>Menú</h2></li>
@@ -25,13 +34,6 @@
 			</ul>
 		</div>
 		<div id="mensaje">
-		</div>
-		<p id="dialogo">
-		</p>
-		<div id="botones">
-			<button onclick="abrirMenu()">Menú</button>
-			<button onclick="anteriorEscena()">Anterior</button>
-			<button onclick="siguienteEscena()">Siguiente</button>
 		</div>
 	</div>
 	<script src="js/escenas.js"></script>

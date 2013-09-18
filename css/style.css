@@ -76,3 +76,13 @@ body {
 #menu ul li h2 {
 	border-bottom: 3px dotted black;
 }
+#personajes {
+	bottom: 100px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+}
+#personaje img {
+	display: inline-block;
+}
