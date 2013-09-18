@@ -14,13 +14,15 @@ body {
 	width: 100px;
 }
 #botones button {
-	border: 0;
+	background: white;
+	border: 3px dotted black;
+	border-radius: .5em;
 	margin: 0 0 0 0;
-	padding: 5.5px 0;
+	padding: 3px 0;
 	width: 100px;
 }
 #botones button:nth-child(2) {
-	margin: 5px 0;
+	margin: 3.5px 0;
 }
 #dialogo {
 	border: 3px dotted black;
@@ -40,16 +42,42 @@ body {
 	position: relative;
 	width: 800px;
 }
+#inicio {
+	background: white;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#inicio #idioma {
+	background: black;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#inicio #idioma a {
+	display: inline-block;
+	margin: 226px 25px;
+	z-index: 10;
+}
+#inicio #idioma a:hover {
+	cursor: pointer;
+}
 #mensaje {
 	background: white;
 	border: 3px dotted black;
+	border-radius: 1em;
 	left: 25%;
 	padding: 25px 0;
 	position: absolute;
 	right: 25%;
 	text-align: center;
 	top: 30%;
-	z-index: 2;
+	z-index: 9;
 }
 #menu {
 	background: white;
@@ -69,9 +97,16 @@ body {
 	width: 150px;
 }
 #menu ul li button {
-	margin: 5px 0;
-	padding: 5px;
+	background: white;
+	border: 0;
+	margin: 0;
+	padding: 10px 5px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 	width: 150px;
+}
+#menu ul li button:hover {
+	background: silver;
 }
 #menu ul li h2 {
 	border-bottom: 3px dotted black;

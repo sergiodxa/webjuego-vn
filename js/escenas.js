@@ -16,8 +16,8 @@ var escenas =	[
 						'char3':'',
 					},
 					{
-						'ES':'<strong>Quote-tan:</strong> Este es el último diálogo del juego.',
-						'EN':'<strong>Quote-tan:</strong> This is the last dialogue in the game.',
+						'ES':'<strong>Quote-tan:</strong> Este es el último diálogo del juego. Si sigues avanzando el juego te muestra un mensaje diciendote que no hay más escenas.',
+						'EN':'<strong>Quote-tan:</strong> This is the last dialogue in the game. If you keep moving the game displays a message telling you that there is not more scenes.',
 						'bg':'convenienceStore.jpg',
 						'char1':'commonstan.png',
 						'char2':'wikipetan.png',
