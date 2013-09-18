@@ -1,6 +1,6 @@
 //Funciones a ejecutar al cargar el sitio
-
-var escena = 0; //definimos la escena inicial como 0
+var idioma = "ES",
+	escena = 0; //definimos la escena inicial como 0
 
 $(document).on('ready', function(){ //ejecutamos el siguiente código inmediatamente que carga el sitio
 	$('#mensaje').hide(); //ocultamos el div #mensaje
@@ -27,7 +27,7 @@ function anteriorEscena() {
 //Cambiar escena
 function cambiarEscena() {
 	$('#juego').css('background-image','url("img/bg/'+escenas[escena].bg+'")'); //cambiamos el fondo por el de la escena actual
-	$('#dialogo').html(escenas[escena].dialogo); //cambiamos el diálogo por el de la escena actual
+	$('#dialogo').html(escenas[escena][idioma]); //cambiamos el diálogo por el de la escena actual
 	if (escenas[escena].char3 != '') {
 		$('#personajes').html('<img src="img/char/'+escenas[escena].char1+'" /><img src="img/char/'+escenas[escena].char2+'" /><img src="img/char/'+escenas[escena].char3+'" />'); //mostramos a los tres personajes
 	}
