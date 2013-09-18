@@ -28,8 +28,7 @@ function guardarPartida() {
 //Cargar partida
 function cargarPartida() {
 	escena = parseInt(localStorage.escena);
-	$('#juego').css('background-image','url("img/bg/'+escenas[escena].bg+'")');
-	$('#dialogo').html(escenas[escena].dialogo);
+	cambiarEscena();
 	$('#mensaje').html('Partida cargada con éxito').fadeIn();
 	setTimeout(function(){$('#mensaje').fadeOut();},1000);
 	cerrarMenu();
@@ -38,15 +37,32 @@ function cargarPartida() {
 /*	Funciones del juego	*/
 /************************/
 //Pasar a siguiente escena
-function siguiente() {
-	escena = escena+1;
-	$('#juego').css('background-image','url("img/bg/'+escenas[escena].bg+'")');
-	$('#dialogo').html(escenas[escena].dialogo);
+function siguienteEscena() {
+	if (escena==escenas.length-1) {
+		$('#mensaje').html('No hay más escenas').fadeIn();
+		setTimeout(function(){$('#mensaje').fadeOut();},1000);
+	}
+	else {
+		++escena;
+		cambiarEscena();
+	}
 };
-
 //Volver a anterior escena
-function anterior() {
-	escena = escena-1;
+function anteriorEscena() {
+	if (escena==0) {
+		$('#mensaje').html('No se puede ir más atras').fadeIn();
+		setTimeout(function(){$('#mensaje').fadeOut();},1000);
+	}
+	else {
+		--escena;
+		cambiarEscena();
+	}
+};
+//Cambiar escena
+function cambiarEscena() {
 	$('#juego').css('background-image','url("img/bg/'+escenas[escena].bg+'")');
 	$('#dialogo').html(escenas[escena].dialogo);
-};
+}
+/************/
+/*	Teclas	*/
+/************/
