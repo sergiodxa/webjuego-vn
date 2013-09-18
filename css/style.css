@@ -40,12 +40,39 @@ body {
 	right: 105px;
 	top: 455px;
 }
+#mensaje {
+	background: white;
+	border: 3px dotted black;
+	left: 25%;
+	padding: 25px 0;
+	position: absolute;
+	right: 25%;
+	text-align: center;
+	top: 30%;
+	z-index: 2;
+}
 #menu {
 	background: white;
+	border: 3px dotted black;
+	left: 322px;
 	position: absolute;
-	top: 25px;
-	left: 25px;
-	right: 25px;
-	bottom: 25px;
+	right: 322px;
+	text-align: center;
+	top: 25%;
 	z-index: 2;
+}
+#menu ul {
+	list-style: none;
+}
+#menu ul li {
+	text-transform: uppercase;
+	width: 150px;
+}
+#menu ul li button {
+	margin: 5px 0;
+	padding: 5px;
+	width: 150px;
+}
+#menu ul li h2 {
+	border-bottom: 3px dotted black;
 }
