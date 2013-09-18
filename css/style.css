@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: black;
+}
+#juego {
+	background: white;
+	background-repeat: no-repeat;
+	height: 550px;
+	margin: 0 auto;
+	position: relative;
+	width: 800px;
+}
+#juego #botones {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	top: 450px;
+	vertical-align: top;
+	width: 100px;
+}
+#juego #botones button {
+	border: 0;
+	margin: 0 0 0 0;
+	padding: 5.5px 0;
+	width: 100px;
+}
+#juego #botones button:nth-child(2) {
+	margin: 5px 0;
+}
+#juego #dialogo {
+	border: 3px dotted black;
+	border-radius: 1em;
+	bottom: 5px;
+	left: 5px;
+	padding: 5px;
+	position: absolute;
+	right: 105px;
+	top: 455px;
+}
+#menu {
+	background: white;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	z-index: 2;
+}
