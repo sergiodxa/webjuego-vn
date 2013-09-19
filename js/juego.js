@@ -1,26 +1,27 @@
-//Funciones a ejecutar al cargar el sitio
 var idioma = localStorage.idioma; //obtenemos el idioma de localStorage
 
 $(document).on('ready', function(){ //ejecutamos el siguiente código inmediatamente que carga el sitio
 	$('#mensaje').hide(); //ocultamos el div #mensaje
 	$('#menu').hide(); //ocultamos el div #menu
+	$('#opciones').hide(); //ocultamos el div #menu
 	if (idioma != undefined) {
 		$('#idioma').hide();
 	};
 });
 
-//Abrir menú
 function abrirMenu() {
 	$('#menu').fadeIn(); //mostramos el menú
 };
 
-//Abrir menú principal
+function abrirOpciones() {
+	$('#opciones').fadeIn(); //mostramos las opciones del juego
+};
+
 function abrirPrincipal() {
 	$('#menu').fadeOut(); //ocultamos el menú
 	$('#inicio').fadeIn(); //mostramos el menú principal
 };
 
-//Volver a anterior escena
 function anteriorEscena() {
 	if (escena==0) { //comprobamos que escena sea igual 0
 		mostrarMensaje('No se puede ir más atras',"No one can go back"); //si se cumple la condición mostramos un mensaje
@@ -31,7 +32,6 @@ function anteriorEscena() {
 	}
 };
 
-//Cambiar escena
 function cambiarEscena() {
 	$('#juego').css('background-image','url("img/bg/'+escenas[escena].bg+'")'); //cambiamos el fondo por el de la escena actual
 	$('#dialogo').html(escenas[escena][idioma]); //cambiamos el diálogo por el de la escena actual
@@ -49,16 +49,14 @@ function cambiarEscena() {
 	}
 };
 
-//Cambiar el idioma del juego
 function cambiarIdioma(valor) {
 	localStorage.idioma = valor; //al valor del idioma en localStorage le damos el valor elegido
 	idioma = valor; //cambiamos la variable idioma por el nombre del idioma
 	$('#idioma').hide(); //ocultamos las banderas
 };
 
-//Cargar partida
 function cargarPartida() {
-	if (localStorage.escena == true) { //comprobamos que haya una partida guardada
+	if (localStorage.escena >= 0) { //comprobamos que haya una partida guardada
 		escena = parseInt(localStorage.escena); //cargamos a la variable escena el valor almacenado en localStorage
 		cambiarEscena(); //llamamos a la función cambiar de escena
 		mostrarMensaje('Partida cargada con éxito','Game successfully loaded'); //llamamos a la función para mostrar el mensaje de que se cargó con éxito
@@ -71,37 +69,65 @@ function cargarPartida() {
 	}
 };
 
-//Cerrar menú
 function cerrarMenu() {
 	$('#menu').fadeOut(); //ocultamos el menú
 };
 
-//Guardar partida
+function cerrarOpciones() {
+	$('#opciones').fadeOut(); //ocultamos las opciones del juego
+};
+
+function guardarOpciones() {
+	idiomaOpciones = $('#idioma_opciones option:selected').val(); //obtenemos el idioma seleccionado
+	cambiarIdioma(idiomaOpciones); //ejecutamos el cambio de idioma
+	mostrarMensaje('Cambios guardados','Changes saved'); //mostramos un mensaje de que los cambios se guardaron
+	cambiarEscena(); //ejecutamos un cambio de escena por si cambio el idioma
+	cerrarOpciones(); //llamamos a la función para cerrar la ventana de opciones
+};
+
 function guardarPartida() {
 	localStorage.escena = escena; //almacenamos en localStorage el número de escena actual
 	mostrarMensaje('Partida guardada con éxito','Game successfully saved'); //llamamos a la función para mostrar el mensaje de que se guardó con éxito
 	cerrarMenu(); //llamamos a la función cerrar el menú
 };
 
-//Iniciamos el juego desde el menú principal
 function empezarJuego() {
 	$('#inicio').fadeOut(); //ocultamos el menú principal
 	escena = 0; //definimos la variable escena como 0
 	cambiarEscena(); //cargamos la escena
 }
 
-//Mostrar mensaje
-function mostrarMensaje(ES, EN) {
+function mostrarMensaje(ES, EN, BR, FR, DE, JP, CH, KR, RU) {
 	if (idioma=='ES') {
 		$('#mensaje').html(ES).fadeIn(); //mostramos el div #mensaje con el texto recibido
 	}
 	else if (idioma=='EN') {
 		$('#mensaje').html(EN).fadeIn(); //mostramos el div #mensaje con el texto recibido
 	}
+	else if (idioma=='BR') {
+		$('#mensaje').html(BR).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
+	else if (idioma=='FR') {
+		$('#mensaje').html(FR).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
+	else if (idioma=='DE') {
+		$('#mensaje').html(DE).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
+	else if (idioma=='JP') {
+		$('#mensaje').html(JP).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
+	else if (idioma=='CH') {
+		$('#mensaje').html(CH).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
+	else if (idioma=='KR') {
+		$('#mensaje').html(KR).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
+	else if (idioma=='RU') {
+		$('#mensaje').html(RU).fadeIn(); //mostramos el div #mensaje con el texto recibido
+	}
 	setTimeout(function(){$('#mensaje').fadeOut();},1000); //esperamos 1s y lo ocultamos
 };
 
-//Pasar a siguiente escena
 function siguienteEscena() {
 	if (escena==escenas.length-1) { //comprobamos que escena sea igual al valor más alto de escenas
 		mostrarMensaje('No hay más escenas','No more scenes'); //si se cumple la condición mostramos un mensaje
@@ -112,7 +138,6 @@ function siguienteEscena() {
 	}
 };
 
-//Funciones ejecutadas al oprimir teclas
 $(document).on('keyup', function(evt) {
 	if (evt.keyCode=='13') { //tecla enter
 		siguienteEscena();

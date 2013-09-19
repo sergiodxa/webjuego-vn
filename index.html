@@ -28,24 +28,36 @@
 				<li><h2>Menú</h2></li>
 				<li><button onclick="guardarPartida()">Guardar partida</button></li>
 				<li><button onclick="cargarPartida()">Cargar partida</button></li>
+				<li><button onclick="abrirOpciones()">Opciones</button></li>
 				<li><button onclick="abrirPrincipal()">Volver al inicio</button></li>
 				<li><button onclick="cerrarMenu()">Cerrar</button></li>
 			</ul>
 		</div>
-		<div id="mensaje"></div>
 		<div id="inicio">
-			<div id="idioma">
-				<a onclick="cambiarIdioma('ES')"><img src="img/lang/esp.png" /></a>
-				<a onclick="cambiarIdioma('EN')"><img src="img/lang/eng.png" /></a>
-			</div>
-			<div="menuPrincipal">
+			<div id="menuPrincipal">
 				<h1 id="titulo">Webjuego VN</h1>
 				<ul>
 					<li><button onclick="empezarJuego()">Iniciar juego</button></li>
 					<li><button onclick="cargarPartida()">Cargar partida</button></li>
+					<li><button onclick="abrirOpciones()">Opciones</button></li>
 				</ul>
 			</div>
+			<div id="idioma">
+				<a onclick="cambiarIdioma('EN')"><img src="img/lang/eng.png" /></a>
+				<a onclick="cambiarIdioma('ES')"><img src="img/lang/esp.png" /></a>
+			</div>
 		</div>
+		<div id="opciones">
+			<h2>Opciones</h2>
+			<label for="idioma_opciones">Idioma:</label>
+			<select name="idioma" id="idioma_opciones">
+				<option value="EN">English</option>
+				<option value="ES">Español</option>
+			</select>
+			<button onclick="guardarOpciones()" id="guardar_opciones">Guardar</button>
+			<button onclick="cerrarOpciones()" id="cerrar_opciones">Cerrar</button>
+		</div>
+		<div id="mensaje"></div>
 	</div>
 	<script src="js/escenas.js"></script>
 	<script src="js/juego.js"></script>

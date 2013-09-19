@@ -12,6 +12,7 @@ body {
 	top: 450px;
 	vertical-align: top;
 	width: 100px;
+	z-index: 2;
 }
 #botones button {
 	background: white;
@@ -20,6 +21,7 @@ body {
 	margin: 0 0 0 0;
 	padding: 3px 0;
 	width: 100px;
+	z-index: 3;
 }
 #botones button:nth-child(2) {
 	margin: 3.5px 0;
@@ -33,6 +35,7 @@ body {
 	position: absolute;
 	right: 105px;
 	top: 455px;
+	z-index: 2;
 }
 #juego {
 	background: white;
@@ -41,6 +44,24 @@ body {
 	margin: 0 auto;
 	position: relative;
 	width: 800px;
+	z-index: 1;
+}
+#idioma {
+	background: black;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 25;
+}
+#idioma a {
+	display: inline-block;
+	margin: 226px 25px;
+}
+#idioma a:hover {
+	cursor: pointer;
 }
 #inicio {
 	background: white;
@@ -49,23 +70,7 @@ body {
 	position: absolute;
 	right: 0;
 	top: 0;
-}
-#inicio #idioma {
-	background: black;
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	right: 0;
-	text-align: center;
-	top: 0;
-}
-#inicio #idioma a {
-	display: inline-block;
-	margin: 226px 25px;
-	z-index: 10;
-}
-#inicio #idioma a:hover {
-	cursor: pointer;
+	z-index: 20;
 }
 #mensaje {
 	background: white;
@@ -77,7 +82,7 @@ body {
 	right: 25%;
 	text-align: center;
 	top: 30%;
-	z-index: 9;
+	z-index: 50;
 }
 #menu {
 	background: white;
@@ -87,7 +92,7 @@ body {
 	right: 322px;
 	text-align: center;
 	top: 25%;
-	z-index: 2;
+	z-index: 20;
 }
 #menu ul {
 	list-style: none;
@@ -111,14 +116,82 @@ body {
 #menu ul li h2 {
 	border-bottom: 3px dotted black;
 }
+#menuPrincipal {
+	position: relative;
+	z-index: 20;
+}
+#menuPrincipal #titulo {
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 25px;
+}
+#menuPrincipal ul {
+	background: white;
+	border: 3px dotted black;
+	left: 300px;
+	list-style: none;
+	position: absolute;
+	right: 300px;
+	text-align: center;
+	top: 100px;
+}
+#menuPrincipal ul li {
+	text-transform: uppercase;
+}
+#menuPrincipal ul li button {
+	background: white;
+	border: 0;
+	margin: 0;
+	padding: 10px 5px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	width: 100%;
+}
+#menuPrincipal ul li button:hover {
+	background: silver;
+}
+#opciones {
+	background: white;
+	border: 3px dotted black;
+	bottom: 12.5%;
+	left: 12.5%;
+	padding: 1em;
+	position: absolute;
+	right: 12.5%;
+	top: 12.5%;
+	z-index: 40;
+}
+#opciones h2 {
+	text-align: center;
+}
+#opciones label,
+#opciones select {
+	display: inline-block;
+	width: 49%;
+}
+#opciones button {
+	bottom: 1em;
+	padding: .5em 2em;
+	position: absolute;
+}
+#opciones #cerrar_opciones {
+	right: 25%;
+}
+#opciones #guardar_opciones {
+	left: 25%;
+}
 #personajes {
 	bottom: 100px;
 	left: 0;
 	position: absolute;
 	right: 0;
 	text-align: center;
+	z-index: 2;
 }
 #personajes img {
 	display: inline-block;
 	max-height: 400px;
+	z-index: 3;
 }
